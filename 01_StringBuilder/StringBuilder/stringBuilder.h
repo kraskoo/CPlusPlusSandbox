@@ -1,5 +1,4 @@
-﻿#ifndef STRINGBUILDER_H
-#define STRINGBUILDER_H
+﻿#pragma once
 #include <string>
 
 namespace sb
@@ -9,12 +8,10 @@ namespace sb
 	private:
 		std::string main_;
 		std::string scratch_;
-
 		const std::string::size_type scratch_size_ = 1024;
 	public:
 		string_builder& append(const std::string& str);
 		string_builder& append_new_line();
-		const std::string& str();
+		std::string str();
 	};
 }
-#endif // STRINGBUILDER_H

@@ -1,4 +1,5 @@
 #include <string>
+#include <sstream>
 #include "stringBuilder.h"
 
 namespace sb
@@ -17,7 +18,9 @@ namespace sb
 
 	string_builder& string_builder::append_new_line()
 	{
-		scratch_.append("\n");
+		std::stringstream ss {};
+		ss << std::endl;
+		scratch_.append(ss.str());
 		if (scratch_.size() > scratch_size_)
 		{
 			main_.append(scratch_);
@@ -28,7 +31,7 @@ namespace sb
 	}
 
 
-	const std::string& string_builder::str()
+	std::string string_builder::str()
 	{
 		if (!scratch_.empty())
 		{
