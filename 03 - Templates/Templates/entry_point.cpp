@@ -3,6 +3,7 @@
 
 #include "functions.cpp"
 #include "iterr_and_delegate.cpp"
+#include "more_templates.cpp"
 
 using namespace std;
 
@@ -19,5 +20,6 @@ int main()
 		"concat(5, 2, 1, 7, 54, 9999, 1324, 4, \"abra\") = " << concat(&int_arr, abra) << endl;
 	
 	execute(vector<string>{ "From ", "time ", "to ", "time ", "sound ", "..." });
+	executeFilter();
 	return 0;
 }

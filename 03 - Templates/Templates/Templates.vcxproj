@@ -153,6 +153,7 @@
     <ClCompile Include="entry_point.cpp" />
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="iterr_and_delegate.cpp" />
+    <ClCompile Include="more_templates.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
